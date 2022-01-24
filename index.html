@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKAPI Dashboard</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="index.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>O<span class="primary">KA</span>PI</h2>
+                </div>
+                <div class="close" id="close-button">
+                    <span class="material-icons">
+                        close
+                        </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons">
+                        dashboard
+                    </span>
+                    <h3>Home</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        perm_identity
+                    </span>
+                    <h3>Profile</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        emoji_events
+                    </span>
+                    <h3>Goals</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        description
+                    </span>
+                    <h3>Data Selection</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        bar_chart
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        mail_outline
+                    </span>
+                    <h3>Messages</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!---------- MAIN SECTION ---------->
+        <main>
+            <h1>Home</h1>
+            
+            <div class="date">
+                <input type="date">
+            </div>
+            
+            <div class="insights">
+                <div class="cars">
+                    <span class="material-icons">
+                        directions_car
+                    </span>
+                    <div class="card-middle">
+                        <div class="left">
+                            <h3>Registered Cars</h3>
+                            <h1>1.234</h1>
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+
+                <div class="distance">
+                    <span class="material-icons">
+                        explore
+                    </span>
+                    <div class="card-middle">
+                        <div class="left">
+                            <h3>Distance Traveled</h3>
+                            <h1>50.248km</h1>
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+
+                <div class="cars">
+                    <span class="material-icons">
+                        assessment
+                    </span>
+                    <div class="card-middle">
+                        <div class="left">
+                            <h3>Data Collected</h3>
+                            <h1>10 TB</h1>
+                        </div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+            </div>
+            
+
+            <!---------- RECENT QUERIES ------------>
+            <div class="recent-queries">
+                <h2>Recent Queries</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Query Description</th>
+                            <th>Query Number</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Audi's in Karlsruhe</td>
+                            <td>57395</td>
+                            <td class="success">Completed</td>
+                            <td class="primary clickable">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Ford Distance Germany 24h</td>
+                            <td>59595</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary clickable">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Cars in Pacific Ocean</td>
+                            <td>57395</td>
+                            <td class="danger">Failed</td>
+                            <td class="primary clickable">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Audi's in Karlsruhe</td>
+                            <td>83396</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary clickable">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Audi's in Karlsruhe</td>
+                            <td>67395</td>
+                            <td class="success">Completed</td>
+                            <td class="primary clickable">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+
+            <!---------- RECENT QUERIES ------------>
+            <div class="charts">
+                <h2>Charts</h2>
+                <div class="card">
+                    <div id="curve-chart" style="width: 100%; height: 300px"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-button">
+                    <span class="material-icons">
+                        menu
+                    </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons active">
+                        light_mode
+                    </span>
+                    <span class="material-icons">
+                        nightlight
+                    </span>
+                </div>
+                <div class="profile">
+                    <p><b>Max Mustermann</b></p>
+                </div>
+                <div class="profile-picture">
+                    <img src="./img/profile-picture.jpg">
+                </div>
+            </div>
+            <!-- END OF TOP -->
+            <div class="achievement-progress">
+                <h2>Goal Progress</h2>
+                <div class="achievements">
+                    <div class="achievement">
+                        <div class="progress">
+                            <svg>
+                                <circle cx="20" cy="20" r="16"></circle>
+                            </svg>
+                        </div>
+                        <div class="message">
+                            <p><b>Reduce Fuel Burned</b> by 20%</p>
+                            <small class="text-muted">90% done</small>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <div class="progress">
+                            <svg>
+                                <circle cx="20" cy="20" r="16"></circle>
+                            </svg>
+                        </div>
+                        <div class="message">
+                            <p><b>Reduce Distance Traveled</b> by 10%</p>
+                            <small class="text-muted">90% done</small>
+                        </div>
+                    </div>
+                    <div class="achievement add">
+                        <div>
+                            <span class="material-icons">add</span>
+                            <h3>Add Goal</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF ACHIEVMENT PROGRESS -->
+            <div class="data-collection">
+                <h2>Data Collection</h2>
+                <div class="item">
+                    <div class="icon">
+                        <span class="material-icons">
+                            local_fire_department
+                        </span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Fuel Burned</h3>
+                            <small class="text-muted">Last Month</small>
+                        </div>
+                        <h5 class="success">-12%</h5>
+                        <h3>14,8 l</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">
+                        <span class="material-icons">
+                            explore
+                        </span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Distance Traveled</h3>
+                            <small class="text-muted">Last Month</small>
+                        </div>
+                        <h5 class="danger">+10%</h5>
+                        <h3>200km</h3>
+                    </div>
+                </div>
+
+                <div class="item add-data">
+                    <div>
+                        <span class="material-icons">add</span>
+                        <h3>Add Data</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
